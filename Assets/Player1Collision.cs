@@ -23,7 +23,7 @@ public class Player1Collision : MonoBehaviour {
             shoot++;
             Destroy(collision.gameObject);
             score.text = "Purple =" + shoot.ToString();
-
+            
         }
 
         if (shoot >= 15)
