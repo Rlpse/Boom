@@ -7,8 +7,7 @@ public class Shoot : MonoBehaviour
 {
     public Transform firepoint;
     public GameObject bull;
-    public GameObject superbullet;
-    public GameObject Boom;
+  
     // Use this for initialization
     void Start()
     {
@@ -23,33 +22,12 @@ public class Shoot : MonoBehaviour
             Shoot1();
         }
 
-        if (Input.GetKeyUp("l"))
-        {
-            Super();
-        }
-
-        if (Input.GetKeyUp("o"))
-        {
-            Boomam();
-        }
+       
+        
     }
 
     void Shoot1()
     {
         Instantiate(bull, firepoint.position, firepoint.rotation);
-    }
-
-    void Super()
-    {
-        Instantiate(superbullet, firepoint.position, firepoint.rotation);
-
-
-    }
-
-    void Boomam()
-    {
-        Destroy(superbullet);
-        Instantiate(superbullet, firepoint.position, firepoint.rotation);
-        Instantiate(Boom, firepoint.position, firepoint.rotation);
     }
 }
