@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 61f4a8bf4ccc94e408801e6c50d29fdd
+timeCreated: 1590846897
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Space: {fileID: 4484533403770888, guid: 3f4151da9e68ea047a6ddd2c61258c9d, type: 2}
+  - SquarePrefab: {fileID: 1545140377253484, guid: 7676c309df86b914aa0c2834ed7af436,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
