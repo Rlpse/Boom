@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WallCollision : MonoBehaviour {
-
+    public GameObject Boom;
 	// Use this for initialization
 	void Start () {
 		
@@ -20,6 +20,7 @@ public class WallCollision : MonoBehaviour {
         {
             Destroy(collision.gameObject);
             Debug.Log("Out of Bounds");
+            
         }
 
         if (collision.gameObject.tag == "Bullet2")
