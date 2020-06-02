@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 public class BossCode : MonoBehaviour
 {
-    public int health = 20;
+    public Transform point1;
+    public GameObject explosion;
+    private int health = 2;
     public Slider healthbar;
     public GameObject boss;
     public GameObject stage;
@@ -12,13 +14,12 @@ public class BossCode : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        healthbar.value = health;
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthbar.value = health;
+        
 
     }
 
@@ -26,23 +27,18 @@ public class BossCode : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            Destroy(collision.gameObject);
-            health--;
-        }
-
-        if (health == 10)
-        {
-            Destroy(healthbar);
-           
-        }
-
-        if (health == 10) 
-        {
             
+            Destroy(collision.gameObject);
+            
+            health--;
         }
 
         if (health == 0)
         {
+
+
+
+            Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(boss);
         }
     }
