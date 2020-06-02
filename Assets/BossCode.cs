@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class BossCode : MonoBehaviour
 {
+    public GameObject fence;
+    private int gateway = 4;
     public Transform point1;
     public GameObject explosion;
     private int health = 2;
@@ -19,7 +21,10 @@ public class BossCode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(gateway == 0)
+        {
+            Destroy(fence);
+        }
 
     }
 
@@ -35,11 +40,12 @@ public class BossCode : MonoBehaviour
 
         if (health == 0)
         {
-
-
-
+            gateway--;
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(boss);
         }
+
+       
+
     }
 }

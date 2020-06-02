@@ -7,7 +7,7 @@ public class P1Special : MonoBehaviour {
     public Transform firepoint1;
     public Transform firepoint2;
     public Transform firepoint3;
-  
+    private int special = 3;
     bool CommandDisabler = false;
     // Use this for initialization
     void Start () {
@@ -16,13 +16,13 @@ public class P1Special : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (CommandDisabler == false)
+        if (special == 3 && special == 2 && special == 1)
         {
-            if (Input.GetKeyUp("g"))
+            if (Input.GetKey("g"))
             {
                 skill();
-                CommandDisabler = true;
                
+                special--;
             }
         }
 	}
